@@ -1,58 +1,34 @@
 import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
-import Logo from './Sabrosa01.png';
-import Flor from './Sabrosa04.png';
+import Logo from './Sabrosa01white.png';
+import Flor2 from './Sabrosa04.png';
 
 const SabrosaAppWrapper = styled.div`
-  background-color: #fefefd;
+  background-color: #dc7b3f;
   margin: -10px;
   height: 110vh;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .image-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -300px;
-    flex-direction: column;
-  }
-  .square-wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+  .logo-wrapper {
+    padding-top: 50px;
   }
 `;
 
-const createBox = keyframes`
-   from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-`;
-
-const StyledSquare = styled.span`
-  height: 120vh;
-  width: 220vh;
-  border: 1px solid violet;
-  animation: ${createBox} 4s infinite;
-`;
+//#2c4fa9
+//#e2560a
+//#dc4894 //rosa
+//#88c579 //verde
+//#b59ded lila
+//#eea2c8 pink
 
 const StyledButton = styled.button`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #e2560a;
+  font-family: 'Titan One', cursive;
+  background-color: #eea2c8;
   border-radius: 4px;
   border: none;
   height: 40px;
   width: 150px;
-  margin-top: 30px;
   color: #fdfefd;
+  margin-top: 30px;
 `;
 const rotate = keyframes`
   from {
@@ -63,29 +39,44 @@ const rotate = keyframes`
   }
 `;
 
+const CircleWrapper = styled.div`
+  background-color: #b59ded;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 150px;
+  left:36%;
+`;
+
 const Rotate = styled.div`
-  margin-top: -250px;
   display: inline-block;
-  animation: ${rotate} 4s linear infinite;
+  object-fit: cover;
+  /* animation: ${rotate} 4s linear infinite; */
   padding: 5px;
   font-size: 1.2rem;
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
 `;
 
 export const SabrosaApp = () => {
   return (
     <SabrosaAppWrapper>
-      <div className='image-wrapper'>
-        <img src={Logo} width='400px' />
-        <Rotate>
-          <img src={Flor} width='300px' />
-        </Rotate>
+      <div className='logo-wrapper'>
+        <img src={Logo} width='300px' />
       </div>
-      <StyledButton
-        onClick={() => {
-          console.log('here');
-        }}>
-        Get tickets
-      </StyledButton>
+
+      <CircleWrapper>
+        <Rotate></Rotate>
+        <img src={Flor2} width='300px' />
+        <StyledButton
+          onClick={() => {
+            console.log('here');
+          }}>
+          GET TICKETS
+        </StyledButton>
+      </CircleWrapper>
     </SabrosaAppWrapper>
   );
 };
