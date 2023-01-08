@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/sabrosa2023.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/sabrosa2023.github.io/static/js/main.a657dc0e.js",
+    "main.js": "/sabrosa2023.github.io/static/js/main.afa1b191.js",
     "static/js/787.f6f59e22.chunk.js": "/sabrosa2023.github.io/static/js/787.f6f59e22.chunk.js",
-    "static/media/Sabrosa04.png": "/sabrosa2023.github.io/static/media/Sabrosa04.d4f8f7e766a08fd03735.png",
-    "static/media/Sabrosa01.png": "/sabrosa2023.github.io/static/media/Sabrosa01.764f34a1143a845c57ce.png",
+    "static/media/Sabrosa04.png": "/sabrosa2023.github.io/static/media/Sabrosa04.0a7006f85851af6db993.png",
+    "static/media/Sabrosa01white.png": "/sabrosa2023.github.io/static/media/Sabrosa01white.4843a98fdedce6fb7e59.png",
     "index.html": "/sabrosa2023.github.io/index.html",
     "main.073c9b0a.css.map": "/sabrosa2023.github.io/static/css/main.073c9b0a.css.map",
-    "main.a657dc0e.js.map": "/sabrosa2023.github.io/static/js/main.a657dc0e.js.map",
+    "main.afa1b191.js.map": "/sabrosa2023.github.io/static/js/main.afa1b191.js.map",
     "787.f6f59e22.chunk.js.map": "/sabrosa2023.github.io/static/js/787.f6f59e22.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.a657dc0e.js"
+    "static/js/main.afa1b191.js"
   ]
 }
