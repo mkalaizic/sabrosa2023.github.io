@@ -1,4 +1,4 @@
-import logo from '../public/Sabrosa03.png';
+import logo from './Sabrosa03.png';
 import './App.css';
 
 function App() {
