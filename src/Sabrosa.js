@@ -10,11 +10,22 @@ const SabrosaAppWrapper = styled.div`
   height: 110vh;
   flex-direction: column;
   .sabrosa-logo {
-    padding-top: 5vh;
+    @media only screen and (max-width: 600px) {
+      transform: scale(0.7);
+    }
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 15vh;
     padding-bottom: 3vh;
+    @media only screen and (min-width: 1024px) {
+      padding-top: 5vh;
+    }
   }
 
   .circle {
+    @media only screen and (max-width: 600px) {
+      transform: scale(0.7);
+    }
     background-color: #b59ded;
     border-radius: 50%;
     z-index: 0;
@@ -27,15 +38,12 @@ const SabrosaAppWrapper = styled.div`
     left: 0;
     right: 0;
     top: 20vh;
-
-    /* @media only screen and (min-width: 1024px) {
-      width: 50vh;
-      height: 50vh;
-      top: 18vh;
-      left: 42vh;
-    } */
   }
   .content-wrapper {
+    @media only screen and (max-width: 600px) {
+      transform: scale(0.7);
+      margin-top: -15vh;
+    }
     z-index: 1;
     position: relative;
   }
@@ -56,7 +64,10 @@ const StyledButton = styled.button`
   height: 40px;
   width: 150px;
   color: #fdfefd;
-  margin-top: 30px;
+  margin-top: 5vh;
+  @media only screen and (max-width: 600px) {
+    margin-top: -5vh;
+  }
 `;
 
 export const SabrosaApp = () => {
