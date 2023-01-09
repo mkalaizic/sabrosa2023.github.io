@@ -2,14 +2,37 @@ import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Logo from './Sabrosa01white.png';
 import Flor2 from './Sabrosa04.png';
+import LogoInstagram from './logoinstagram.png';
 
 const SabrosaAppWrapper = styled.div`
   background-color: #dc7b3f;
-  margin: -10px;
+  margin: -1vh;
   height: 110vh;
   flex-direction: column;
-  .logo-wrapper {
-    padding-top: 50px;
+  .sabrosa-logo {
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+  }
+  .circle {
+    background-color: #b59ded;
+    border-radius: 50%;
+    z-index: 0;
+    position: absolute;
+    width: 50vh;
+    height: 50vh;
+    top: 21vh;
+    left: 3vh;
+
+    @media only screen and (min-width: 1024px) {
+      width: 50vh;
+      height: 50vh;
+      top: 18vh;
+      left: 42vh;
+    }
+  }
+  .content-wrapper {
+    z-index: 1;
+    position: relative;
   }
 `;
 
@@ -30,53 +53,29 @@ const StyledButton = styled.button`
   color: #fdfefd;
   margin-top: 30px;
 `;
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const CircleWrapper = styled.div`
-  background-color: #b59ded;
-  border-radius: 50%;
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  top: 150px;
-  left:36%;
-`;
-
-const Rotate = styled.div`
-  display: inline-block;
-  object-fit: cover;
-  /* animation: ${rotate} 4s linear infinite; */
-  padding: 5px;
-  font-size: 1.2rem;
-  width: 100px;
-  height: 100px;
-  object-fit: fill;
-`;
 
 export const SabrosaApp = () => {
   return (
     <SabrosaAppWrapper>
-      <div className='logo-wrapper'>
+      <div className='sabrosa-logo'>
         <img src={Logo} width='300px' />
       </div>
 
-      <CircleWrapper>
-        <Rotate></Rotate>
-        <img src={Flor2} width='300px' />
-        <StyledButton
-          onClick={() => {
-            console.log('here');
-          }}>
-          GET TICKETS
-        </StyledButton>
-      </CircleWrapper>
+      <div className='content-wrapper'>
+        <div className='instagram-logo'>
+          <img src={LogoInstagram} width='30px' />
+        </div>
+        <div className='flor'>
+          <img src={Flor2} width='300px' />
+        </div>
+      </div>
+      <div className='circle'></div>
+      <StyledButton
+        onClick={() => {
+          console.log('here');
+        }}>
+        GET TICKETS
+      </StyledButton>
     </SabrosaAppWrapper>
   );
 };
