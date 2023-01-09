@@ -13,22 +13,27 @@ const SabrosaAppWrapper = styled.div`
     padding-top: 5vh;
     padding-bottom: 3vh;
   }
+
   .circle {
     background-color: #b59ded;
     border-radius: 50%;
     z-index: 0;
-    position: absolute;
     width: 50vh;
     height: 50vh;
-    top: 21vh;
-    left: 3vh;
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 20vh;
 
-    @media only screen and (min-width: 1024px) {
+    /* @media only screen and (min-width: 1024px) {
       width: 50vh;
       height: 50vh;
       top: 18vh;
       left: 42vh;
-    }
+    } */
   }
   .content-wrapper {
     z-index: 1;
@@ -58,17 +63,18 @@ export const SabrosaApp = () => {
   return (
     <SabrosaAppWrapper>
       <div className='sabrosa-logo'>
-        <img src={Logo} width='300px' />
+        <img src={Logo} width='300vh' />
       </div>
 
       <div className='content-wrapper'>
         <div className='instagram-logo'>
-          <img src={LogoInstagram} width='30px' />
+          <img src={LogoInstagram} width='20vh' />
         </div>
         <div className='flor'>
-          <img src={Flor2} width='300px' />
+          <img src={Flor2} width='300vh' />
         </div>
       </div>
+
       <div className='circle'></div>
       <StyledButton
         onClick={() => {
