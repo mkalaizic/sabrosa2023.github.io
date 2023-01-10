@@ -32,6 +32,7 @@ const SabrosaAppWrapper = styled.div`
   .circle {
     @media only screen and (max-width: 600px) {
       transform: scale(0.8);
+      top: 8em;
     }
     background-color: #b59ded;
     border-radius: 50%;
@@ -44,7 +45,7 @@ const SabrosaAppWrapper = styled.div`
     margin: auto;
     left: 0;
     right: 0;
-    top: 8em;
+    top: 20vh;
   }
   .content-wrapper {
     @media only screen and (max-width: 600px) {
@@ -56,12 +57,15 @@ const SabrosaAppWrapper = styled.div`
   }
   .text {
     margin-top: 2vh;
-    margin-bottom: 5vh;
+margin-bottom: -7vh;
     color: white;
     font-family: 'Rowdies', cursive;
     display: flex;
     flex-direction: column;
     gap: 1.5vh;
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 5vh;
+    }
   }
 `;
 
