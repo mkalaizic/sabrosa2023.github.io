@@ -145,7 +145,7 @@ export const SabrosaApp = () => {
       <StyledButton
         onClick={() => {
           window.open(
-            'https://www.eventbrite.com/e/sabrosa-nov-12th-tickets-456181991617'
+            'https://www.eventbrite.com/e/sabrosa-season-opener-january-28th-2023-tickets-511800748817'
           );
         }}>
         GET TICKETS
