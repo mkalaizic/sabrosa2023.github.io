@@ -16,13 +16,19 @@ const SabrosaAppWrapper = styled.div`
     }
     display: inline-block;
     overflow: hidden;
-    padding-top: 15vh;
+    padding-top: 10vh;
     padding-bottom: 5vh;
     @media only screen and (min-width: 1024px) {
       padding-top: 10vh;
     }
   }
 
+  .flor {
+    @media only screen and (max-width: 600px) {
+      transform: scale(1.1);
+      margin-top: 2em;
+    }
+  }
   .circle {
     @media only screen and (max-width: 600px) {
       transform: scale(0.8);
@@ -30,15 +36,15 @@ const SabrosaAppWrapper = styled.div`
     background-color: #b59ded;
     border-radius: 50%;
     z-index: 0;
-    width: 40vh;
-    height: 40vh;
+    width: 20em;
+    height: 20em;
     text-align: center;
     position: absolute;
     text-align: center;
     margin: auto;
     left: 0;
     right: 0;
-    top: 22vh;
+    top: 8em;
   }
   .content-wrapper {
     @media only screen and (max-width: 600px) {
@@ -47,6 +53,15 @@ const SabrosaAppWrapper = styled.div`
     }
     z-index: 1;
     position: relative;
+  }
+  .text {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    color: white;
+    font-family: 'Rowdies', cursive;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
   }
 `;
 
@@ -71,10 +86,10 @@ const StyledButton = styled.button`
   background-color: #eea2c8;
   border-radius: 4px;
   border: none;
-  height: 40px;
-  width: 150px;
+  height: 5vh;
+  width: 15vh;
   color: #fdfefd;
-  margin-top: 5vh;
+  margin-top: 12vh;
   animation: ${animate2} 1s linear infinite;
   animation-delay: 0.25s;
   @media only screen and (max-width: 600px) {
@@ -107,102 +122,6 @@ const ButtonGroup = styled.div`
   }
 `;
 
-// a{
-//   position: relative;
-//   display: inline-block;
-//   padding: 25px 30px;
-//   margin: 40px 0;
-//   color: #03e9f4;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   transition: 0.5s;
-//   letter-spacing: 4px;
-//   overflow: hidden;
-//   margin-right: 50px;
-
-// }
-// a:hover{
-//   background: #03e9f4;
-//   color: #050801;
-//   box-shadow: 0 0 5px #03e9f4,
-//               0 0 25px #03e9f4,
-//               0 0 50px #03e9f4,
-//               0 0 200px #03e9f4;
-//    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
-// }
-// a:nth-child(1){
-//   filter: hue-rotate(270deg);
-// }
-// a:nth-child(2){
-//   filter: hue-rotate(110deg);
-// }
-// a span{
-//   position: absolute;
-//   display: block;
-// }
-// a span:nth-child(1){
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 2px;
-//   background: linear-gradient(90deg,transparent,#03e9f4);
-//   animation: animate1 1s linear infinite;
-// }
-// @keyframes animate1{
-//   0%{
-//       left: -100%;
-//   }
-//   50%,100%{
-//       left: 100%;
-//   }
-// }
-// a span:nth-child(2){
-//   top: -100%;
-//   right: 0;
-//   width: 2px;
-//   height: 100%;
-//   background: linear-gradient(180deg,transparent,#03e9f4);
-//   animation: animate2 1s linear infinite;
-//   animation-delay: 0.25s;
-// }
-
-// }
-// a span:nth-child(3){
-//   bottom: 0;
-//   right: 0;
-//   width: 100%;
-//   height: 2px;
-//   background: linear-gradient(270deg,transparent,#03e9f4);
-//   animation: animate3 1s linear infinite;
-//   animation-delay: 0.50s;
-// }
-// @keyframes animate3{
-//   0%{
-//       right: -100%;
-//   }
-//   50%,100%{
-//       right: 100%;
-//   }
-// }
-
-// a span:nth-child(4){
-//   bottom: -100%;
-//   left: 0;
-//   width: 2px;
-//   height: 100%;
-//   background: linear-gradient(360deg,transparent,#03e9f4);
-//   animation: animate4 1s linear infinite;
-//   animation-delay: 0.75s;
-// }
-// @keyframes animate4{
-//   0%{
-//       bottom: -100%;
-//   }
-//   50%,100%{
-//       bottom: 100%;
-//   }
-// }
-
 export const SabrosaApp = () => {
   return (
     <SabrosaAppWrapper>
@@ -218,6 +137,11 @@ export const SabrosaApp = () => {
       </div>
 
       <div className='circle'></div>
+      <div className='text'>
+        <div>Jan 28 2023</div>
+        <div>Early Bird Tickets Available</div>
+      </div>
+
       <StyledButton
         onClick={() => {
           window.open(
